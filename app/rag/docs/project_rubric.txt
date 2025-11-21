@@ -1,0 +1,36 @@
+Project Evaluation Rubric
+
+Correctness – Prompting & Chaining (Weight: 30%)
+- Meets requirements: prompt design, LLM chaining, RAG context.
+- 1 = Not implemented
+- 2 = Minimal attempt
+- 3 = Works partially
+- 4 = Works correctly
+- 5 = Fully correct and thoughtful implementation
+
+Code Quality & Structure (Weight: 25%)
+- Clean, modular, reusable, testable.
+- 1 = Poor
+- 2 = Some structure
+- 3 = Decent modularity
+- 4 = Good structure + some tests
+- 5 = Excellent quality + strong testing
+
+Resilience & Error Handling (Weight: 20%)
+- Handles failures, retries, API randomness.
+- 1 = Missing
+- 2 = Minimal handling
+- 3 = Partial handling
+- 4 = Solid handling
+- 5 = Robust, production-ready
+
+Documentation & Explanation (Weight: 15%)
+- README clarity, setup instructions, trade-offs.
+- 1 = Missing
+- 2 = Minimal
+- 3 = Adequate
+- 4 = Clear
+- 5 = Excellent and insightful
+
+Creativity / Bonus (Weight: 10%)
+- Optional improvements beyond requirements.

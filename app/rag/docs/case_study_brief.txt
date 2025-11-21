@@ -1,0 +1,61 @@
+Case Study Brief – Backend Evaluation
+
+Objective:
+Build a backend service that automates the initial screening of a job application. The service receives a candidate’s CV and a project report, evaluates them against a job description and a case study brief, and produces a structured AI-generated evaluation report.
+
+System Inputs:
+Candidate CV (PDF)
+Project Report (PDF)
+
+Reference Documents (Ground Truth):
+1. Job Description – used to evaluate CV.
+2. Case Study Brief – used to evaluate Project Report.
+3. CV Scoring Rubric.
+4. Project Scoring Rubric.
+
+Required API Endpoints:
+POST /upload
+- Receives CV and Report PDFs.
+- Stores the files.
+- Returns IDs.
+
+POST /evaluate
+- Triggers asynchronous evaluation.
+- Accepts job title and document IDs.
+- Returns job ID: { "id": "456", "status": "queued" }
+
+GET /result/{id}
+- Returns job status: queued, processing, or completed.
+- Completed result contains:
+  - cv_match_rate
+  - cv_feedback
+  - project_score
+  - project_feedback
+  - overall_summary
+
+Evaluation Pipeline:
+1. RAG Retrieval
+- Ingest Job Description, Case Study Brief, CV Rubric, Project Rubric into vector DB.
+- Retrieve relevant sections for prompts.
+
+2. Prompt Design & LLM Chaining
+CV Evaluation:
+- Parse candidate CV.
+- Retrieve JD + CV Rubric.
+- Use LLM to produce:
+  - match_rate (0–1)
+  - feedback.
+
+Project Report Evaluation:
+- Retrieve Case Study Brief + Project Rubric.
+- Use LLM to produce:
+  - project_score (1–5)
+  - project_feedback.
+
+Final Analysis:
+- A final LLM call synthesizes the overall summary.
+
+Process Handling:
+- Evaluation must run asynchronously.
+- Implement retries and error handling.
+- Control randomness using low temperature.

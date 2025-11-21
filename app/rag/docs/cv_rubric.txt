@@ -1,0 +1,33 @@
+CV Evaluation Rubric (Match Rate Calculation)
+
+Technical Skills Match (Weight: 40%)
+- Alignment with job requirements: backend, databases, APIs, cloud, AI/LLM.
+- 1 = Irrelevant skills
+- 2 = Few overlaps
+- 3 = Partial match
+- 4 = Strong match
+- 5 = Excellent match + AI/LLM exposure
+
+Experience Level (Weight: 25%)
+- Years of experience and project complexity.
+- 1 = Less than 1 year
+- 2 = 1–2 years
+- 3 = 2–3 years with mid-scale projects
+- 4 = 3–4 years strong track record
+- 5 = 5+ years or high-impact projects
+
+Relevant Achievements (Weight: 20%)
+- Impact of past work: scaling, performance, adoption.
+- 1 = No achievements
+- 2 = Minimal improvements
+- 3 = Some measurable outcomes
+- 4 = Significant contributions
+- 5 = Major impact
+
+Cultural / Collaboration Fit (Weight: 15%)
+- Communication, learning mindset, teamwork.
+- 1 = Not demonstrated
+- 2 = Minimal evidence
+- 3 = Average
+- 4 = Good
+- 5 = Excellent communication and collaboration
